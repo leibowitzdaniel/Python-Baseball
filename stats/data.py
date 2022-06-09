@@ -34,6 +34,6 @@ games = pd.concat(
     sort=False
 )
 
-games = games.fillna('')  # NOTE: is this supposed to be an empty string or a space?
+games = games.fillna(' ')  # NOTE: is this supposed to be an empty string or a space?
 games.loc[:, ['type']] = pd.Categorical(games.loc[:, ['type']])
 print(games.head())
